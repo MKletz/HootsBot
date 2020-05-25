@@ -1,24 +1,21 @@
 # bot.py
 import os
-
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
+__version__ = "0.0.1"
+
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 
 description = "Discord bot for organizing tournaments"
 
 bot = commands.Bot(command_prefix=":", description=description)
 
-__version__ = "0.0.1"
-
-
 cog_registry = [
     "cogs.match"
 ]
-
 
 # On startup
 @bot.event
@@ -59,4 +56,4 @@ async def on_message(message) -> None:
 
 # Run Bot
 if __name__ == "__main__":
-    bot.run(TOKEN)
+    bot.run(DISCORD_TOKEN)
