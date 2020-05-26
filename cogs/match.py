@@ -39,6 +39,7 @@ class Match(commands.Cog):
 
         for member in missing_members:
             await ctx.message.channel.send(f'{member.mention} report to {landing_channel.name} immediately or risk disqualification.')
+            await member.send(f'Report to {landing_channel.name} in {ctx.guild.name} immediately or risk disqualification.')
 
         return len(missing_members)
 
