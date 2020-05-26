@@ -14,7 +14,8 @@ description = "Discord bot for organizing tournaments"
 bot = commands.Bot(command_prefix=":", description=description)
 
 cog_registry = [
-    "cogs.match"
+    "cogs.feature",
+    "cogs.info"
 ]
 
 # On startup

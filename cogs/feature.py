@@ -12,7 +12,7 @@ FEATURE_NOTIFICATION_MAX_WAIT = int(os.getenv('FEATURE_NOTIFICATION_MAX_WAIT'))
 TOURNAMENT_ORGANIZER_ROLE = os.getenv('TOURNAMENT_ORGANIZER_ROLE')
 TOURNAMENT_PLAYER_ROLE = os.getenv('TOURNAMENT_PLAYER_ROLE')
 
-class Match(commands.Cog):
+class Feature(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -106,4 +106,4 @@ class Match(commands.Cog):
             await member.move_to(feature_channel)
 
 def setup(bot):
-    bot.add_cog(Match(bot))
+    bot.add_cog(Feature(bot))
